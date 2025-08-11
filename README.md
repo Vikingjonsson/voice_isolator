@@ -12,10 +12,6 @@ The project is structured as follows:
 
 -   `main.py`: The main entry point of the application.
 -   `src/`: Contains the source code, organized by feature.
-    -   `get_api_key/`: Logic for retrieving the ElevenLabs API key.
-    -   `isolate_voice/`: Logic for isolating the voice from an audio file.
-    -   `save_result/`: Logic for saving the processed audio file.
-    -   `select_audio_file/`: Logic for finding and selecting audio files.
 -   `input/`: Directory for input audio files (ignored by git).
 -   `output/`: Directory for processed output files (ignored by git).
 -   `.github/workflows/ci.yml`: GitHub Actions workflow for continuous integration.
