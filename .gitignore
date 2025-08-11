@@ -3,6 +3,7 @@ venv/
 .pytest_cache/
 .ruff_cache/
 *.pyc
+*__pycache__
 
 
 # Ignore all content in the input/ and output/ directories...

@@ -11,8 +11,11 @@ This tool provides a simple command-line interface to process audio files. You p
 The project is structured as follows:
 
 -   `main.py`: The main entry point of the application.
--   `src/voice_isolator.py`: Contains the core logic for interacting with the ElevenLabs API, handling file I/O, and processing audio.
--   `src/test_*.py`: Unit tests for the functions in `voice_isolator.py`.
+-   `src/`: Contains the source code, organized by feature.
+    -   `get_api_key/`: Logic for retrieving the ElevenLabs API key.
+    -   `isolate_voice/`: Logic for isolating the voice from an audio file.
+    -   `save_result/`: Logic for saving the processed audio file.
+    -   `select_audio_file/`: Logic for finding and selecting audio files.
 -   `input/`: Directory for input audio files (ignored by git).
 -   `output/`: Directory for processed output files (ignored by git).
 -   `.github/workflows/ci.yml`: GitHub Actions workflow for continuous integration.
@@ -84,10 +87,10 @@ pip install -r requirements-dev.txt
 
 ### Running Tests
 
-The tests are written using Python's built-in `unittest` framework.
+The tests are written using Python's built-in `unittest` framework and are co-located with the code.
 
-To run the test suite, use the following command:
+To run the test suite, use the following command, which will discover and run all tests in the `src` directory:
 
 ```bash
-python -m unittest discover
+python -m unittest discover src
 ```

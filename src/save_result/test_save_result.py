@@ -1,8 +1,8 @@
 import unittest
-from unittest.mock import patch, mock_open
 from io import BytesIO
+from unittest.mock import mock_open, patch
 
-from src.voice_isolator import save_result
+from src.save_result.save_result import save_result
 
 
 class TestSaveResult(unittest.TestCase):

@@ -2,7 +2,7 @@ import os
 import unittest
 from unittest.mock import patch
 
-from src.voice_isolator import get_api_key
+from src.get_api_key.get_api_key import get_api_key
 
 
 class TestGetApiKey(unittest.TestCase):
@@ -11,7 +11,7 @@ class TestGetApiKey(unittest.TestCase):
         """Tests that the API key is returned correctly when set."""
         self.assertEqual(get_api_key(), "test_api_key")
 
-    @patch("src.voice_isolator.load_dotenv")
+    @patch("src.get_api_key.get_api_key.load_dotenv")
     @patch.dict(os.environ, {}, clear=True)
     def test_get_api_key_not_found(self, mock_load_dotenv):
         """Tests that a ValueError is raised when the API key is not found."""
