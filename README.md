@@ -91,13 +91,3 @@ To run the test suite, use the following command:
 ```bash
 python -m unittest discover
 ```
-
-### Contributing
-
-We welcome contributions! Please follow these steps to contribute:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Make your changes.
-4.  Ensure that the tests and linters pass.
-5.  Submit a pull request with a clear description of your changes.
