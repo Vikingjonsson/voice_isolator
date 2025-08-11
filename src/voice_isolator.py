@@ -1,6 +1,7 @@
 import glob
 import os
 from io import BytesIO
+from typing import Union
 
 from dotenv import load_dotenv
 from elevenlabs.client import ElevenLabs
@@ -17,7 +18,7 @@ def get_api_key() -> str:
     return api_key
 
 
-def select_audio_file() -> str | None:
+def select_audio_file() -> Union[str, None]:
     """Finds audio files and prompts the user to select one."""
     print("Searching for audio files in 'input/' directory...")
     SUPPORTED_FORMATS = ["**/*.mp3", "**/*.wav", "**/*.flac", "**/*.m4a"]
@@ -51,7 +52,7 @@ def select_audio_file() -> str | None:
             print("Invalid input. Please enter a number.")
 
 
-def isolate_voice(file_path: str, api_key: str) -> BytesIO | None:
+def isolate_voice(file_path: str, api_key: str) -> Union[BytesIO, None]:
     """Sends the audio file to ElevenLabs for voice isolation using the official SDK.
     Always returns a BytesIO stream on success, regardless of the SDK's return form.
     """
@@ -92,7 +93,7 @@ def isolate_voice(file_path: str, api_key: str) -> BytesIO | None:
         return None
 
 
-def save_result(audio_data: bytes | BytesIO, original_path: str):
+def save_result(audio_data: Union[bytes, BytesIO], original_path: str):
     """Saves the isolated audio to the output directory."""
     original_filename = os.path.basename(original_path)
     name, ext = os.path.splitext(original_filename)
