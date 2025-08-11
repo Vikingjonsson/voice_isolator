@@ -1,8 +1,14 @@
 venv/
 .mypy_cache/
 .pytest_cache/
+.ruff_cache/
 *.pyc
 
 
+# Ignore all content in the input/ and output/ directories...
 input/*
 output/*
+
+# ...but not the .gitkeep files
+!input/.gitkeep
+!output/.gitkeep
