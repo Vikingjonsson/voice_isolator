@@ -1,7 +1,7 @@
-from src.get_api_key import get_api_key
-from src.isolate_voice import isolate_voice
-from src.save_result import save_result
-from src.select_audio_file import select_audio_file
+from src.get_api_key.get_api_key import get_api_key
+from src.isolate_voice.isolate_voice import isolate_voice
+from src.save_result.save_result import save_result
+from src.select_audio_file.select_audio_file import select_audio_file
 
 
 def main():
